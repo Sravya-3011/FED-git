@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form demo</title>
+</head>
+<body>
+    <form action="https://newerp.kluniversity.in">
+        <caption>Student Registration system</caption>
+        <br>
+        <br> 
+        First Name:<input type="text" id="fn" name="firstname">
+        <br>
+        <br>
+        Middle Name:<input type="text" id="mn" name="middlename">
+        <br>
+        <br>
+        last Name:<input type="text" id="ln" name="lasstname">
+        <br>
+        <br>
+        <label >Gender:</label>
+          <input type="radio" name="gender" value="male">Male
+          <input type="radio" name="gender" value="female">Female
+          <input type="radio" name="gender" value="other">Other
+          <br>
+          <br>
+          <label >Email</label>
+         <input type="email" required>
+         <br>
+          <br>
+         <label>Phone number</label>
+         <input type="tel" pattern="[0-9]{10}" >
+         <br>
+          <br>
+         <label>Date of birth</label>
+         <input type="date" required><br>
+         <label>Adress:</label>
+         <br>
+         <textarea rows="4"></textarea>
+         <br>
+          <br>
+         <label >languages known</label>
+         <input type="checkbox" value="telugu">telugu
+          <input type="checkbox" value="tamil">tamil
+          <input type="checkbox" value="hindi">hindi
+          <input type="checkbox" value="English">English
+         <br>
+         <br>
+         <label>Branch</label>
+         <select>
+            <option >--select--</option>
+            <option> "CSE"</option>
+            <option>"ECE"</option>
+            <option> "AIDS"</option>
+            <option> "Mechanical"</option>
+         </select>
+         <br>
+          <br>
+         <label>Upload resume</label>
+         <input type="file">
+         <br>
+          <br>
+         <button>submit</button>
+        </form>
+</body>
+</html>
