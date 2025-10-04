@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KL University Login</title>
+  <style>
+    body {
+      background: linear-gradient(to left, #FFFFF0, #7a7a7a);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+      color: #000000;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      border: 2px solid #ECFAE5;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 10px;
+      color: #1A2A80;
+    }
+
+    h1 span {
+      color: #1A2A80;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .login-options, .admin-options {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .login-card {
+      background-color: #CFFFE2;
+      border: 2px solid #D6D85D;
+      border-radius: 10px;
+      width: 150px;
+      padding: 20px;
+      color: #BA487F;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .login-card:hover {
+      transform: scale(1.05);
+    }
+
+    .login-card img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .login-card p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .profile-page {
+      display: none;
+      padding: 40px;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #1A2A80;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #3442ad;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="main-page">
+    <h1>Welcome to <span>KL University</span></h1>
+    <p>Your access point to KL University's Academic Management System</p>
+
+    <div class="login-options">
+      <div class="login-card" onclick="showProfile('admin')">
+        <img src="https://img.icons8.com/ios-filled/100/admin-settings-male.png" alt="Admin Icon">
+        <p>Admin Login</p>
+      </div>
+
+      <div class="login-card" onclick="showProfile('faculty')">
+        <img src="https://img.icons8.com/ios-filled/100/classroom.png" alt="Faculty Icon">
+        <p>Faculty Login</p>
+      </div>
+
+      <div class="login-card" onclick="showProfile('student')">
+        <img src="https://img.icons8.com/ios-filled/100/student-male.png" alt="Student Icon">
+        <p>Student Login</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Portal Page -->
+  <div id="admin" class="profile-page">
+    <h1 style="border: 2px solid orange; padding: 10px 30px; border-radius: 10px; display: inline-block;">Welcome to Admin Portal</h1>
+
+    <div class="admin-options">
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/user-male-circle.png" alt="Profile">
+        <p>Profile</p>
+      </div>
+
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/graduation-cap.png" alt="User Management">
+        <p>User Management</p>
+      </div>
+
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/open-book--v1.png" alt="Course Management">
+        <p>Course Management</p>
+      </div>
+
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/teacher.png" alt="Course Mapped Faculty">
+        <p>Course Mapped Faculty</p>
+      </div>
+
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/student-male.png" alt="Course Mapped Student">
+        <p>Course Mapped Student</p>
+      </div>
+
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/test-passed.png" alt="Report">
+        <p>Report</p>
+      </div>
+
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/test-account.png" alt="Result">
+        <p>Result</p>
+      </div>
+    </div>
+
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <!-- Faculty Placeholder -->
+  <div id="faculty" class="profile-page">
+    <h1>Welcome to the Faculty Profile</h1>
+    <div class="admin-options">
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/classroom.png" alt="Courses">
+        <p>My Courses</p>
+      </div>
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/test-passed.png" alt="Grades">
+        <p>Grade Book</p>
+      </div>
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/user-group-man-man.png" alt="Students">
+        <p>Student List</p>
+      </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <!-- Student Placeholder -->
+  <div id="student" class="profile-page">
+    <h1>Welcome to the Student Profile</h1>
+    <div class="admin-options">
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/book.png" alt="Enrolled Courses">
+        <p>My Courses</p>
+      </div>
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/test-passed.png" alt="Results">
+        <p>My Results</p>
+      </div>
+      <div class="login-card">
+        <img src="https://img.icons8.com/ios-filled/100/user-male-circle.png" alt="Profile">
+        <p>My Profile</p>
+      </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <script>
+    function showProfile(profile) {
+      document.getElementById("main-page").style.display = "none";
+      document.getElementById(profile).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll(".profile-page").forEach(page => {
+        page.style.display = "none";
+      });
+      document.getElementById("main-page").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

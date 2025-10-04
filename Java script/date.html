@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript date object</title>
+</head>
+<body>
+    <h1>JavaScript Date Object & Methods</h1>
+    <script>
+        document.write("<h2>Creating Dates</h2>");
+        let now = new Date();
+        document.write("Current Date and Time: "+now,"<br><br>");
+        let specificDate = new Date(2025, 8,13);//months are 0-based
+        document.write("Specific Date (2025-08-13): "+specificDate,"<br><br>");
+
+        let dateFromString = new Date("2025-08-13T11:50:20");
+        document.write("Date from string: "+dateFromString,"<br><br>");
+
+        let timestampdate = new Date(1735689600000);
+        document.write("Date from timestamp (1735689600000): "+timestampdate,"<br><br>");
+
+        document.write("<h2>Getting Date Components</h2>");
+        document.write("year: "+now.getFullYear(),"<br>");
+        document.write("month: "+(now.getMonth()+1),"<br>"); //months are 0-based
+        document.write("date: "+now.getDate(),"<br>");
+        document.write("day: "+now.getDay(),"<br>");
+         document.write("hours: "+now.getHours(),"<br>");
+         document.write("minutes: "+now.getMinutes(),"<br>");
+        document.write("seconds: "+now.getSeconds(),"<br>");
+        document.write("milliseconds: "+now.getmilliSeconds(),"<br>");
+
+        document.write("<h2>setting Date components</h2>");
+        now.setFullYear(2024);
+        let d = new Date();
+        d.setFullYear(2030);
+        d.setMonth(5);
+        d.setDate(15);
+        d.setHours(10);
+        d.setMinutes(45);
+        document.write("modified date: "+d,"<br><br>");
+        document.write("tolocaleTimeString(): "+now.toLocaleTimeString(),"<br>");
+        document.write("toToString: "+now.toToString(),"<br>");
+        document.write()
+        
+    </script>
+</body>
+</html>
