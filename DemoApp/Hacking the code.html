@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kerala Travel Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      background: #0b5ed7;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #content {
+      flex: 1;
+      padding: 20px;
+      background: #f9f9f9;
+      overflow-y: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #e6e6e6;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    li:hover {
+      background: #ccc;
+    }
+    .hidden {
+      display: none;
+    }
+    .sub-menu {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with HOME DASHBOARD & USER LOGIN -->
+  <header>
+    <div onclick="showDashboard()">HOME DASHBOARD</div>
+    <div onclick="showLogin()">USER LOGIN</div>
+  </header>
+
+  <!-- Main Content -->
+  <div id="content">
+    <p>Click "HOME DASHBOARD" or "USER LOGIN" to continue.</p>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById("content").innerHTML = `
+        <h2>User Login</h2>
+        <form>
+          <label>Username:</label><br>
+          <input type="text" placeholder="Enter username"><br><br>
+          <label>Password:</label><br>
+          <input type="password" placeholder="Enter password"><br><br>
+          <button type="button">Login</button>
+        </form>
+      `;
+    }
+
+    function showDashboard() {
+      document.getElementById("content").innerHTML = `
+        <h2>Main Menu</h2>
+        <ul>
+          <li onclick="showCities()">1. Cities and Places in Kerala</li>
+          <li onclick="showHotels()">2. Hotels & Restaurants</li>
+          <li onclick="showGuides()">3. Guides and Services</li>
+          <li onclick="showHistory()">4. AI History Generator</li>
+          <li onclick="showTranslator()">5. Voice & Image Translator</li>
+          <li onclick="showProfile()">6. Profile and Past Booking</li>
+        </ul>
+      `;
+    }
+
+    function showCities() {
+      document.getElementById("content").innerHTML = `
+        <h2>Cities and Places in Kerala</h2>
+        <ul>
+          <li onclick="showTemples()">Temples</li>
+          <li onclick="showTouristPlaces()">Tourist Places</li>
+        </ul>
+      `;
+    }
+
+    function showTemples() {
+      document.getElementById("content").innerHTML = `
+        <h2>Temples in Kerala</h2>
+        <ul>
+          <li>Sabarimala Temple</li>
+          <li>Guruvayur Temple</li>
+          <li>Padmanabhaswamy Temple</li>
+          <li>Vadakkunnathan Temple</li>
+        </ul>
+      `;
+    }
+
+    function showTouristPlaces() {
+      document.getElementById("content").innerHTML = `
+        <h2>Tourist Places in Kerala</h2>
+        <ul>
+          <li>Munnar</li>
+          <li>Alleppey Backwaters</li>
+          <li>Kovalam Beach</li>
+          <li>Thekkady</li>
+        </ul>
+      `;
+    }
+
+    function showHotels() {
+      document.getElementById("content").innerHTML = `
+        <h2>Hotels & Restaurants Nearby</h2>
+        <ul>
+          <li>Leela Kovalam</li>
+          <li>Kumarakom Lake Resort</li>
+          <li>Marari Beach Resort</li>
+          <li>Houseboats in Alleppey</li>
+        </ul>
+      `;
+    }
+
+    function showGuides() {
+      document.getElementById("content").innerHTML = `
+        <h2>Guides & Services</h2>
+        <ul>
+          <li>Local Guide - Trivandrum</li>
+          <li>Wildlife Safari Guide - Thekkady</li>
+          <li>Backwater Tour Guide - Alleppey</li>
+          <li>Heritage Walk Guide - Kochi</li>
+        </ul>
+      `;
+    }
+
+    function showHistory() {
+      document.getElementById("content").innerHTML = `
+        <h2>AI History Generator</h2>
+        <p>Enter a place name to generate history:</p>
+        <input type="text" placeholder="e.g., Munnar">
+        <button>Generate</button>
+        <p><i>(This will show AI-generated history info here)</i></p>
+      `;
+    }
+
+    function showTranslator() {
+      document.getElementById("content").innerHTML = `
+        <h2>Voice & Image Translator</h2>
+        <p>Select Language:</p>
+        <select>
+          <option>English</option>
+          <option>Hindi</option>
+          <option>Malayalam</option>
+          <option>Tamil</option>
+          <option>Telugu</option>
+          <option>Kannada</option>
+          <option>Bengali</option>
+          <option>Marathi</option>
+        </select>
+      `;
+    }
+
+    function showProfile() {
+      document.getElementById("content").innerHTML = `
+        <h2>Profile & Past Bookings</h2>
+        <ul>
+          <li>Show Total Bookings</li>
+          <li>Show Travel Plan & History</li>
+          <li>Save in Profile</li>
+        </ul>
+      `;
+    }
+  </script>
+</body>
+</html>

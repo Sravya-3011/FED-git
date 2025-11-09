@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Rating Page</title>
+</head>
+<body>
+  <!-- Step 1 & 2: Add video element with controls and set width & height -->
+  <video width="320" height="240" controls>
+    <!-- Step 3 & 4: Add source element -->
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Step 5: Add form element -->
+  <form>
+    <!-- Step 6: Add div element for rating -->
+    <div>
+      <!-- Step 7: Add label -->
+      <label for="rating">Rate this video:</label>
+      
+      <!-- Step 8–11: Add input element (slider) -->
+      <input type="range" id="rating" name="rating" min="1" max="5" list="ratings">
+      
+      <!-- Step 12–18: Add datalist with options -->
+      <datalist id="ratings">
+        <option value="1" label="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5" label="5"></option>
+      </datalist>
+    </div>
+
+    <!-- Step 19: Add submit button -->
+    <button type="submit">Submit Rating</button>
+  </form>
+</body>
+</html>
